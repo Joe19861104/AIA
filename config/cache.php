@@ -50,7 +50,7 @@ return [
             // 缓存前缀
             'prefix'     => Env::get('cache.cache_prefix', 'c:'),
             // 缓存标签前缀
-            'tag_prefix'    => Env::get('cache.cache_tag_prefix', 'CRMEB:'),
+            'tag_prefix'    => Env::get('cache.cache_tag_prefix', 'AIA:'),
             // 数据库 0号数据库
             'select'        => intval(Env::get('redis.select', 0)),
             // 序列化机制 例如 ['serialize', 'unserialize']
