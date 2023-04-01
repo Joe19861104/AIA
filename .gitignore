@@ -8,3 +8,4 @@ public/upgrade
 view
 composer.lock
 .idea
+phpExcel

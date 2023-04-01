@@ -21,7 +21,7 @@ class AdminException extends \RuntimeException
     {
         if (is_array($message)) {
             $errInfo = $message;
-            $message = $errInfo[1] ?? '未知错误';
+            $message = $errInfo[1] ?? 'unknown err';
             if ($code === 0) {
                 $code = $errInfo[0] ?? 400;
             }
