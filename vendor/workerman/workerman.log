@@ -35,3 +35,6 @@
 2023-04-02 10:21:41 pid:67542 Workerman[think] has been stopped
 2023-04-02 11:27:46 pid:71079 Workerman[think] start in DEBUG mode
 2023-04-02 11:28:21 pid:71391 Workerman[think] start in DAEMON mode
+2023-04-02 17:02:46 pid:71079 Workerman[think] stopping ...
+2023-04-02 17:02:46 pid:71079 Workerman[think] has been stopped
+2023-04-02 17:02:49 pid:83387 Workerman[think] start in DAEMON mode

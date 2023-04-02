@@ -48,9 +48,7 @@ class UserExtract extends AuthController
             ['nireid', '', '', 'like'],
             ['data', '', '', 'time'],
         ]);
-        if (isset($where['extract_type']) && $where['extract_type'] == 'wx') {
-            $where['extract_type'] = 'weixin';
-        }
+
         return app('json')->success($this->services->index($where));
     }
 

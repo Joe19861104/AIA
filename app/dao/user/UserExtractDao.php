@@ -69,7 +69,7 @@ class UserExtractDao extends BaseDao
     {
         return $this->search($where)->field($field)->with([
             'user' => function ($query) {
-                $query->field('uid,nickname');
+                $query->field('uid,account');
             }])->page($page, $limit)->order('id desc')->select()->toArray();
     }
 

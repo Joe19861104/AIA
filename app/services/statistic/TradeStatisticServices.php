@@ -276,7 +276,7 @@ class TradeStatisticServices extends BaseServices
 
         $Chain['goods'] = $OrderCurve;
 
-        /** 购买会员金额 */
+        /** 投注金额 */
         $memberMoney = $this->getMemberTotalMoney($where, 'sum');
         $lastMemberMoney = $this->getMemberTotalMoney($dateWhere, 'sum', "", $isNum);
         $memberCurve = $this->getMemberTotalMoney($where, 'group', "pay_time");
