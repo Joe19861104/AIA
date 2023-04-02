@@ -1,7 +1,7 @@
 ## Environment Required
 
 - PHP7.1-7.4
-- Swoole Version 4.8.16
+- Swoole Version 4.8.13
 - ThinkPHP6.0.3
 
 ## Run

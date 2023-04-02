@@ -243,7 +243,7 @@ class ExportExcel extends AuthController
             ['paid', ''],
             ['page', 1],
             ['limit', 20],
-            ['nickname', ''],
+            ['account', ''],
             ['excel', '1'],
         ]);
         $data = $services->getRechargeList($where, '*', false);
@@ -261,7 +261,7 @@ class ExportExcel extends AuthController
     public function userAgent(AgentManageServices $services)
     {
         $where = $this->request->getMore([
-            ['nickname', ''],
+            ['account', ''],
             ['data', ''],
             ['excel', '1'],
         ]);

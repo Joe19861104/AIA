@@ -12,3 +12,26 @@
 2023-04-01 20:54:43 pid:66379 Workerman[think] stopping ...
 2023-04-01 20:54:43 pid:66379 worker[none:66380] exit with status 256
 2023-04-01 20:54:43 pid:66379 Workerman[think] has been stopped
+2023-04-02 09:50:55 pid:65979 Workerman[think] start in DEBUG mode
+2023-04-02 09:51:33 pid:65979 Workerman[think] stopping ...
+2023-04-02 09:51:33 pid:65979 Workerman[think] has been stopped
+2023-04-02 09:51:36 pid:66031 Workerman[think] start in DAEMON mode
+2023-04-02 10:01:31 pid:66395 Workerman[think] start in DEBUG mode
+2023-04-02 10:01:45 pid:66395 Workerman[think] stopping ...
+2023-04-02 10:01:45 pid:66395 Workerman[think] has been stopped
+2023-04-02 10:01:50 pid:66420 Workerman[think] start in DAEMON mode
+2023-04-02 10:01:50 pid:66420 Workerman[think] already running
+2023-04-02 10:01:57 pid:66431 Workerman[think] stop 
+2023-04-02 10:01:57 pid:66431 Workerman[think] is stopping ...
+2023-04-02 10:01:57 pid:66033 Workerman[think] stopping ...
+2023-04-02 10:01:57 pid:66033 worker[none:66034] exit with status 65280
+2023-04-02 10:01:57 pid:66033 Workerman[think] has been stopped
+2023-04-02 10:01:57 pid:66431 Workerman[think] stop success
+2023-04-02 10:02:04 pid:66441 Workerman[think] start in DEBUG mode
+2023-04-02 10:02:20 pid:66441 Workerman[think] stopping ...
+2023-04-02 10:02:20 pid:66441 Workerman[think] has been stopped
+2023-04-02 10:20:50 pid:67542 Workerman[think] start in DEBUG mode
+2023-04-02 10:21:41 pid:67542 Workerman[think] stopping ...
+2023-04-02 10:21:41 pid:67542 Workerman[think] has been stopped
+2023-04-02 11:27:46 pid:71079 Workerman[think] start in DEBUG mode
+2023-04-02 11:28:21 pid:71391 Workerman[think] start in DAEMON mode

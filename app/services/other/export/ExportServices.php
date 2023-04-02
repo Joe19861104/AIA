@@ -41,7 +41,7 @@ class ExportServices extends BaseServices
             foreach ($data as $item) {
                 $one_data = [
                     'uid' => $item['uid'],
-                    'nickname' => $item['nickname'],
+                    'account' => $item['account'],
                     'real_name' => $item['real_name'],
                     'sex' => $item['sex'],
                     'phone' => $item['phone'],
@@ -402,7 +402,7 @@ class ExportServices extends BaseServices
             foreach ($data as $value) {
                 $export[] = [
                     $value['uid'],
-                    $value['nickname'],
+                    $value['account'],
                     $value['pm'] == 0 ? '-' . $value['number'] : $value['number'],
                     $value['title'],
                     $value['mark'],
@@ -428,7 +428,7 @@ class ExportServices extends BaseServices
         if (!empty($data)) {
             foreach ($data as &$value) {
                 $export[] = [
-                    $value['nickname'],
+                    $value['account'],
                     $value['sum_number'],
                     $value['now_money'],
                     $value['brokerage_price'],
@@ -459,7 +459,7 @@ class ExportServices extends BaseServices
                     $item['balance'],
                     $item['number'],
                     $item['mark'],
-                    $item['nickname'],
+                    $item['account'],
                     $item['add_time'],
                 ];
             }
@@ -497,7 +497,7 @@ class ExportServices extends BaseServices
                 $item['paid_type'] = $item['paid'] ? '已支付' : '未支付';
 
                 $export[] = [
-                    $item['nickname'],
+                    $item['account'],
                     $item['price'],
                     $item['paid_type'],
                     $item['_recharge_type'],
@@ -526,7 +526,7 @@ class ExportServices extends BaseServices
             foreach ($data as $index => $item) {
                 $export[] = [
                     $item['uid'],
-                    $item['nickname'],
+                    $item['account'],
                     $item['phone'],
                     $item['spread_count'],
                     $item['order_count'],

@@ -43,7 +43,7 @@ class UserRechargeDao extends BaseDao
     {
         return $this->search($where)->field($filed)->with([
             'user' => function ($query) {
-                $query->field('uid,phone,nickname,avatar');
+                $query->field('uid,phone,account,avatar');
             }])->when($page && $limit, function ($query) use ($page, $limit) {
             $query->page($page, $limit);
         })->order('id desc')->select()->toArray();

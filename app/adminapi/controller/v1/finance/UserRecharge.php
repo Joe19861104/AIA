@@ -40,7 +40,7 @@ class UserRecharge extends AuthController
         $where = $this->request->getMore([
             ['data', ''],
             ['paid', ''],
-            ['nickname', ''],
+            ['account', ''],
         ]);
         return app('json')->success($this->services->getRechargeList($where));
     }

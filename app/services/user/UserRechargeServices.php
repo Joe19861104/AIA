@@ -71,8 +71,8 @@ class UserRechargeServices extends BaseServices
         if (isset($where['paid']) && $where['paid'] != '') {
             $whereData['paid'] = $where['paid'];
         }
-        if (isset($where['nickname']) && $where['nickname']) {
-            $whereData['like'] = $where['nickname'];
+        if (isset($where['account']) && $where['account']) {
+            $whereData['like'] = $where['account'];
         }
         if (isset($where['recharge_type']) && $where['recharge_type']) {
             $whereData['recharge_type'] = $where['recharge_type'];
@@ -95,8 +95,8 @@ class UserRechargeServices extends BaseServices
         if (isset($where['paid']) && $where['paid'] != '') {
             $whereData['paid'] = $where['paid'];
         }
-        if (isset($where['nickname']) && $where['nickname']) {
-            $whereData['like'] = $where['nickname'];
+        if (isset($where['account']) && $where['account']) {
+            $whereData['like'] = $where['account'];
         }
         [$page, $limit] = $this->getPageValue($is_page);
         $list = $this->dao->getList($whereData, $field, $page, $limit);
@@ -104,8 +104,8 @@ class UserRechargeServices extends BaseServices
 
         foreach ($list as &$item) {
             switch ($item['recharge_type']) {
-                case 'routine':
-                    $item['_recharge_type'] = '小程序充值';
+                case 'bank':
+                    $item['_recharge_type'] = getLang(100000);
                     break;
                 case PayServices::WEIXIN_PAY:
                     $item['_recharge_type'] = '公众号充值';
@@ -145,7 +145,7 @@ class UserRechargeServices extends BaseServices
         $data['cryptoCurrencyPrice'] = $this->getRechargeSum($where, 'price');
         return [
             [
-                'name' => '充值总金额',
+                'name' => getLang(500030),
                 'field' => '元',
                 'count' => $data['sumPrice'],
                 'className' => 'logo-yen',
@@ -269,7 +269,7 @@ class UserRechargeServices extends BaseServices
         //写入资金流水
         /** @var CapitalFlowServices $capitalFlowServices */
         $capitalFlowServices = app()->make(CapitalFlowServices::class);
-        $UserRecharge['nickname'] = $userInfo['nickname'];
+        $UserRecharge['account'] = $userInfo['account'];
         $UserRecharge['phone'] = $userInfo['phone'];
         $capitalFlowServices->setFlow($UserRecharge, 'refund_recharge');
 
@@ -361,7 +361,7 @@ class UserRechargeServices extends BaseServices
         //写入提现记录
         $extractInfo = [
             'uid' => $uid,
-            'real_name' => $user['nickname'],
+            'real_name' => $user['account'],
             'extract_type' => 'balance',
             'extract_price' => $price,
             'balance' => $user['brokerage_price'],
@@ -467,7 +467,7 @@ class UserRechargeServices extends BaseServices
 
         /** @var CapitalFlowServices $capitalFlowServices */
         $capitalFlowServices = app()->make(CapitalFlowServices::class);
-        $order['nickname'] = $user['nickname'];
+        $order['account'] = $user['account'];
         $order['phone'] = $user['phone'];
         $capitalFlowServices->setFlow($order, 'recharge');
 

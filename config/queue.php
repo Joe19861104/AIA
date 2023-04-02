@@ -12,7 +12,7 @@ use think\facade\Env;
 
 return [
     'default'     => 'redis',
-    'prefix'      => 'crmeb_',
+    'prefix'      => 'aia_',
     'connections' => [
         'sync'     => [
             'driver' => 'sync',
@@ -24,10 +24,10 @@ return [
         ],
         'redis'    => [
             'driver'     => 'redis',
-            'queue'      => 'AIA' . Env::get('queue.queue_name', ''),
+            'queue'      => 'CRMEB' . Env::get('queue.queue_name', ''),
             'host'       => Env::get('redis.redis_hostname', '127.0.0.1'),
             'port'       => Env::get('redis.port', 6379),
-            'password'   => Env::get('redis.redis_password', ''),
+            'password'   => Env::get('redis.redis_password', 'redis2022'),
             'select'     => Env::get('redis.select', 0),
             'timeout'    => 0,
             'persistent' => false,

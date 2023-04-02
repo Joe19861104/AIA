@@ -1260,5 +1260,5 @@ return [
     200011 => "This account has been banned and cannot be operated",
     200012 => "The number of personal templates has reached the upper limit, the upper limit is 25",
     200014 => "Please check the category of the applet",
-//    50000 => 'Route not found'
+    500030 => "Recharge Total Amount"
 ];

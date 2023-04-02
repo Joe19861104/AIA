@@ -49,7 +49,7 @@ class UserRecharge extends BaseModel
     public function user()
     {
         return $this->hasOne(User::class, 'uid', 'uid')->bind([
-            'nickname' => 'nickname',
+            'account' => 'account',
             'avatar' => 'avatar'
         ]);
     }
@@ -115,7 +115,7 @@ class UserRecharge extends BaseModel
     {
         $query->where(function ($query) use ($value) {
             $query->whereLike('uid|order_id', "%" . $value . "%")->whereOr('uid', 'in', function ($query) use ($value) {
-                $query->name('user')->whereLike('nickname', "%" . $value . "%")->field('uid')->select();
+                $query->name('user')->whereLike('account', "%" . $value . "%")->field('uid')->select();
             });
         });
     }
