@@ -1542,16 +1542,16 @@ HTML;
             'date' => '今日'
         ];
         $info = array_values(compact('sales', 'visits', 'order', 'user'));
-        $info[0]['title'] = '总盈亏';
-        $info[1]['title'] = '总充值';
-        $info[2]['title'] = '用户访问量';
-        $info[3]['title'] = '总投注量';
-        $info[4]['title'] = '新增用户';
-        $info[0]['total_name'] = '本月盈亏';
-        $info[1]['total_name'] = '本月充值';
-        $info[2]['total_name'] = '本月访问量';
-        $info[3]['total_name'] = '本月投注量';
-        $info[4]['total_name'] = '本月新增用户';
+        $info[0]['title'] = 'Total profit and loss';
+        $info[1]['title'] = 'Total Recharge Amount';
+        $info[2]['title'] = 'User Visits';
+        $info[3]['title'] = 'Total Bet Count';
+        $info[4]['title'] = 'New User';
+        $info[0]['total_name'] = 'Profit and loss for this month';
+        $info[1]['total_name'] = 'Recharge this month';
+        $info[2]['total_name'] = 'Visits this month';
+        $info[3]['total_name'] = 'Betting volume this month';
+        $info[4]['total_name'] = 'new users this month';
         return $info;
     }
 

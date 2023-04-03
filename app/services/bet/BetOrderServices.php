@@ -20,7 +20,7 @@ class BetOrderServices extends BaseServices
 
 
     /**
-     * 获取用户投注数据
+     * 获取用户订单数据
      * @return array
      */
     public function user_order_list(array $where)
@@ -35,34 +35,34 @@ class BetOrderServices extends BaseServices
         $data['cryptoCurrencyPrice'] = 4;
         return [
             [
-                'name' => '总投注数',
+                'name' => 'Total Bet Count',
                 'field' => '单',
                 'count' => $data['sumPrice'],
                 'className' => 'logo-yen',
                 'col' => 6,
             ],
             [
-                'name' => '总投注金额',
+                'name' => 'Total Vet Amount',
                 'field' => '元',
                 'count' => $data['bankPrice'],
                 'className' => 'logo-bitcoin',
                 'col' => 6,
             ],
             [
-                'name' => '有效投注金额',
+                'name' => 'Valid Betting Amount',
                 'field' => '元',
                 'count' => $data['thirdPayPrice'],
                 'className' => 'ios-bicycle',
                 'col' => 6,
             ],
             [
-                'name' => '奖金',
+                'name' => 'Bonus',
                 'field' => '元',
                 'count' => $data['cryptoCurrencyPrice'],
                 'className' => 'logo-bitcoin',
                 'col' => 6,
             ], [
-                'name' => '盈亏',
+                'name' => 'Profit and Loss',
                 'field' => '元',
                 'count' => $data['cryptoCurrencyPrice'],
                 'className' => 'logo-bitcoin',

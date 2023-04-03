@@ -105,19 +105,13 @@ class UserRechargeServices extends BaseServices
         foreach ($list as &$item) {
             switch ($item['recharge_type']) {
                 case 'bank':
-                    $item['_recharge_type'] = getLang(100000);
+                    $item['_recharge_type'] = getLang(500032);
                     break;
-                case PayServices::WEIXIN_PAY:
-                    $item['_recharge_type'] = '公众号充值';
+                case 'crypt':
+                    $item['_recharge_type'] = getLang(500031);
                     break;
-                case 'system':
-                    $item['_recharge_type'] = '系统充值';
-                    break;
-                case PayServices::ALIAPY_PAY:
-                    $item['_recharge_type'] = '支付宝充值';
-                    break;
-                default:
-                    $item['_recharge_type'] = '其他充值';
+                case 'third':
+                    $item['_recharge_type'] = getLang(500033);
                     break;
             }
             $item['_pay_time'] = $item['pay_time'] ? date('Y-m-d H:i:s', $item['pay_time']) : '暂无';

@@ -1149,22 +1149,22 @@ class UserServices extends BaseServices
                 'key' => '元',
             ],
             [
-                'title' => '总计投注',
+                'title' => 'Total Count',
                 'value' => $orderServices->count($where),
                 'key' => '笔',
             ],
             [
-                'title' => '总投注金额',
+                'title' => 'Total Bet Amount',
                 'value' => $orderServices->together($where, 'pay_price'),
                 'key' => '元',
             ],
             [
-                'title' => '本月投注',
+                'title' => 'Bet this month',
                 'value' => $orderServices->count($where + ['time' => 'month']),
                 'key' => '笔',
             ],
             [
-                'title' => '本月投注金额',
+                'title' => 'Betting amount this month',
                 'value' => $orderServices->together($where + ['time' => 'month'], 'pay_price'),
                 'key' => '元',
             ]
@@ -1316,7 +1316,7 @@ class UserServices extends BaseServices
             $chartdata['xAxis'] = $data['day'];//X轴值
             $chartdata['series'] = $data['count'];//分类1值
         }
-        $chartdata['bing_xdata'] = ['未投注用户', '投注一次用户', '留存客户', '回流客户'];
+        $chartdata['bing_xdata'] = ['No Bet User', 'Bet once User', '留存客户', '回流客户'];
         $color = ['#5cadff', '#b37feb', '#19be6b', '#ff9900'];
         $pay[0] = $this->dao->count(['pay_count' => 0]);
         $pay[1] = $this->dao->count(['pay_count' => 1]);
