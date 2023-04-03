@@ -1260,5 +1260,8 @@ return [
     200011 => "This account has been banned and cannot be operated",
     200012 => "The number of personal templates has reached the upper limit, the upper limit is 25",
     200014 => "Please check the category of the applet",
-    500030 => "Recharge Total Amount"
+    500030 => "Recharge Total Amount",
+    500034 => "Bank Recharge Amount",
+    500035 => "Third Recharge Amount",
+    500036 => "Virtual currency Recharge Amount"
 ];
